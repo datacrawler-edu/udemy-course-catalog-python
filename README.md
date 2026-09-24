@@ -79,6 +79,9 @@ The example reads [`data/sample-input.json`](data/sample-input.json), starts the
   "searchTerms": ["python"],
   "maxItems": 3,
   "freeOnly": false,
+  "sortOrder": "RATING",
+  "languages": ["EN"],
+  "minRating": 4.5,
   "includeCourseDetails": false
 }
 ```
@@ -140,7 +143,7 @@ See [`docs/faq.md`](docs/faq.md) for questions derived from the real input, outp
 
 ## Limits and pricing
 
-Submit 1–10 unique Udemy keywords or phrases, each up to 200 characters. `maxItems` defaults to 100 and accepts 1–10,000 unique courses across all terms. `freeOnly` defaults to `false`; `includeCourseDetails` defaults to `false` and can increase request count and run time.
+Submit 1–10 unique Udemy keywords or phrases, each up to 200 characters. `maxItems` defaults to 100 and accepts 1–10,000 unique courses across all terms. `freeOnly` defaults to `false`; `includeCourseDetails` defaults to `false` and can increase request count and run time. Optional catalog filters include `sortOrder` (`RELEVANCE`, `REVIEWS`, `RATING`, `TIME`), ISO-639-1 `languages` and `closedCaptionLanguages`, `levels`, `minRating` in half-point increments, `videoLengths`, and boolean requirements for captions, quizzes, coding exercises, practice tests, workspaces, roleplays, certification preparation and practice-test-only courses.
 
 The Actor charges one `course-result` event for each unique public course successfully written to the default Dataset. The current configured tier range is **$0.00100–$0.00075 per result**, equivalent to **$1.00–$0.75 per 1,000 courses** depending on the Apify tier. Failed requests, duplicates and records not written to the Dataset do not create that event. See the [Actor pricing page](https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata) for the active terms.
 

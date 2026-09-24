@@ -4,5 +4,10 @@
   ],
   "maxItems": 3,
   "freeOnly": false,
+  "sortOrder": "RATING",
+  "languages": [
+    "EN"
+  ],
+  "minRating": 4.5,
   "includeCourseDetails": false
 }

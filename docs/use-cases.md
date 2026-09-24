@@ -15,6 +15,25 @@ Submit the topics you want to compare and set a shared unique-course target.
 
 Inspect `title`, `url`, `ratingAverage`, `ratingCount`, `instructors`, `durationSeconds` and the generated `sourceSearchUrl`.
 
+## Filtered discovery
+
+Combine catalog filters when a research question needs a narrower result set, for example highly rated beginner courses in English with captions:
+
+```json
+{
+  "searchTerms": ["python"],
+  "maxItems": 10,
+  "sortOrder": "RATING",
+  "languages": ["EN"],
+  "levels": ["BEGINNER"],
+  "minRating": 4.5,
+  "closedCaptionLanguages": ["EN"],
+  "mustHaveClosedCaptions": true
+}
+```
+
+Use `videoLengths` for duration bands and the feature flags for quizzes, coding exercises, practice tests, workspaces, roleplays or certification preparation. See the [input reference](input-reference.md) for the complete enum list.
+
 ## Price and rating snapshots
 
 Run the same terms periodically with a small `maxItems` value and store the Dataset exports with `scrapedAt`.
