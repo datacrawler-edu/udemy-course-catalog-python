@@ -4,10 +4,19 @@
   ],
   "maxItems": 3,
   "freeOnly": false,
-  "sortOrder": "RATING",
-  "languages": [
-    "EN"
-  ],
-  "minRating": 4.5,
+  "sortOrder": "RELEVANCE",
+  "languages": [],
+  "levels": [],
+  "minRating": 0,
+  "videoLengths": [],
+  "closedCaptionLanguages": [],
+  "mustHaveClosedCaptions": false,
+  "mustHaveQuizzes": false,
+  "mustHaveCodingExercises": false,
+  "mustHavePracticeTests": false,
+  "mustHaveWorkspaces": false,
+  "mustHaveRoleplays": false,
+  "practiceTestCoursesOnly": false,
+  "certificationPrepOnly": false,
   "includeCourseDetails": false
 }

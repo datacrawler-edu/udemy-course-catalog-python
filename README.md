@@ -74,21 +74,37 @@ The example reads [`data/sample-input.json`](data/sample-input.json), starts the
 
 ## Input example
 
+The following valid JSON includes every public input property. Empty selector arrays and `false` flags leave those optional filters disabled; replace them with the predefined values from [`docs/input-reference.md`](docs/input-reference.md) when narrowing the catalog.
+
+<!-- apify-input-example:complete -->
 ```json
 {
-  "searchTerms": ["python"],
+  "searchTerms": [
+    "python"
+  ],
   "maxItems": 3,
   "freeOnly": false,
-  "sortOrder": "RATING",
-  "languages": ["EN"],
-  "minRating": 4.5,
+  "sortOrder": "RELEVANCE",
+  "languages": [],
+  "levels": [],
+  "minRating": 0,
+  "videoLengths": [],
+  "closedCaptionLanguages": [],
+  "mustHaveClosedCaptions": false,
+  "mustHaveQuizzes": false,
+  "mustHaveCodingExercises": false,
+  "mustHavePracticeTests": false,
+  "mustHaveWorkspaces": false,
+  "mustHaveRoleplays": false,
+  "practiceTestCoursesOnly": false,
+  "certificationPrepOnly": false,
   "includeCourseDetails": false
 }
 ```
 
 See the complete field guide in [`docs/input-reference.md`](docs/input-reference.md).
 
-The main selector inputs are `sortOrder`, `languages`, `levels`, `minRating`, `videoLengths` and `closedCaptionLanguages`. In Apify, language multiselects show readable labels such as **English (EN)** and **Spanish (ES)**; API and JSON integrations send the corresponding ISO code. The feature filters are checkboxes and default to `false`.
+The complete example contains the selector inputs `sortOrder`, `languages`, `levels`, `minRating`, `videoLengths` and `closedCaptionLanguages`, together with every feature checkbox. In Apify, language multiselects show readable labels such as **English (EN)** and **Spanish (ES)**; API and JSON integrations send the corresponding ISO code. The feature filters default to `false`.
 
 ## Request examples
 

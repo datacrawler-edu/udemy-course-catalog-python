@@ -25,6 +25,36 @@ In the Apify web interface, Udemy-specific filters are presented as predefined d
 | `certificationPrepOnly` | boolean | No | `false` | Return only certification-preparation courses. |
 | `includeCourseDetails` | boolean | No | `false` | Request available structured fields from each public course page. Default `false`; increases request count and run time. |
 
+## Complete input contract
+
+This valid JSON includes every public input property. Empty selector arrays and `false` flags leave optional filters disabled.
+
+<!-- apify-input-example:complete -->
+```json
+{
+  "searchTerms": [
+    "python"
+  ],
+  "maxItems": 3,
+  "freeOnly": false,
+  "sortOrder": "RELEVANCE",
+  "languages": [],
+  "levels": [],
+  "minRating": 0,
+  "videoLengths": [],
+  "closedCaptionLanguages": [],
+  "mustHaveClosedCaptions": false,
+  "mustHaveQuizzes": false,
+  "mustHaveCodingExercises": false,
+  "mustHavePracticeTests": false,
+  "mustHaveWorkspaces": false,
+  "mustHaveRoleplays": false,
+  "practiceTestCoursesOnly": false,
+  "certificationPrepOnly": false,
+  "includeCourseDetails": false
+}
+```
+
 ## Smallest useful input
 
 ```json
