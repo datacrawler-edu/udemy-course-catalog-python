@@ -42,7 +42,7 @@ You can run the hosted Actor directly from the Apify web interface.
 
 1. Open [Udemy Course Catalog & Pricing Data Scraper on Apify](https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata).
 2. In the **Input** tab, enter one or more Udemy keywords or phrases.
-3. Set the maximum number of unique courses, optionally select free courses, and decide whether to include course-page details.
+3. Set the maximum number of unique courses, choose the available catalog filters from their predefined dropdowns or multiselects, optionally select free courses, and decide whether to include course-page details.
 4. Click **Start**.
 5. Open the **Dataset** tab and export JSON, CSV or Excel-compatible data.
 
@@ -143,7 +143,7 @@ See [`docs/faq.md`](docs/faq.md) for questions derived from the real input, outp
 
 ## Limits and pricing
 
-Submit 1–10 unique Udemy keywords or phrases, each up to 200 characters. `maxItems` defaults to 100 and accepts 1–10,000 unique courses across all terms. `freeOnly` defaults to `false`; `includeCourseDetails` defaults to `false` and can increase request count and run time. Optional catalog filters include `sortOrder` (`RELEVANCE`, `REVIEWS`, `RATING`, `TIME`), ISO-639-1 `languages` and `closedCaptionLanguages`, `levels`, `minRating` in half-point increments, `videoLengths`, and boolean requirements for captions, quizzes, coding exercises, practice tests, workspaces, roleplays, certification preparation and practice-test-only courses.
+Submit 1–10 unique Udemy keywords or phrases, each up to 200 characters. `maxItems` defaults to 100 and accepts 1–10,000 unique courses across all terms. `freeOnly` defaults to `false`; `includeCourseDetails` defaults to `false` and can increase request count and run time. Optional catalog filters include predefined `sortOrder` (`RELEVANCE`, `REVIEWS`, `RATING`, `TIME`), ISO-639-1 language multiselects, Udemy level and video-length multiselects, `minRating` in half-point increments, and boolean requirements for captions, quizzes, coding exercises, practice tests, workspaces, roleplays, certification preparation and practice-test-only courses. The web UI prevents invalid selector values; JSON and API callers must use the exact enum values documented below.
 
 The Actor charges one `course-result` event for each unique public course successfully written to the default Dataset. The current configured tier range is **$0.00100–$0.00075 per result**, equivalent to **$1.00–$0.75 per 1,000 courses** depending on the Apify tier. Failed requests, duplicates and records not written to the Dataset do not create that event. See the [Actor pricing page](https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata) for the active terms.
 

@@ -2,6 +2,8 @@
 
 The Actor accepts keywords and phrases. It constructs the public Udemy search requests internally.
 
+In the Apify web interface, Udemy-specific filters are presented as predefined dropdowns or multiselects. Users select valid options instead of typing filter codes. API and JSON callers must send the exact enum values shown here.
+
 | Field | Type | Required | Example | Description |
 | --- | --- | :---: | --- | --- |
 | `searchTerms` | array of strings | Yes | `["python", "data science"]` | 1–10 unique keywords or phrases, each up to 200 characters. |
