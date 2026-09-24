@@ -2,7 +2,7 @@
 
 The Actor accepts keywords and phrases. It constructs the public Udemy search requests internally.
 
-In the Apify web interface, Udemy-specific filters are presented as predefined dropdowns or multiselects. Users select valid options instead of typing filter codes. API and JSON callers must send the exact enum values shown here.
+In the Apify web interface, Udemy-specific filters are presented as predefined dropdowns or multiselects. Language selectors show readable names such as `English (EN)` and `Spanish (ES)` while sending the ISO-639-1 code internally. Users select valid options instead of typing filter codes. API and JSON callers must send the exact enum values shown here.
 
 | Field | Type | Required | Example | Description |
 | --- | --- | :---: | --- | --- |
