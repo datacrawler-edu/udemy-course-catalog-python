@@ -1,0 +1,152 @@
+{
+  "repository": {
+    "name": "udemy-course-catalog-python",
+    "description": "Python, JavaScript and cURL examples for extracting structured Udemy course catalog data, prices and metadata through Apify.",
+    "homepage": "https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata",
+    "language": "Python",
+    "license": "MIT"
+  },
+  "actor": {
+    "displayName": "Udemy Course Catalog & Pricing Data Scraper",
+    "id": "datascraperes/udemy-course-catalog-scraper",
+    "storeUrl": "https://apify.com/datascraperes/udemy-course-catalog-scraper",
+    "apiBaseUrl": "https://api.apify.com/v2/acts/datascraperes~udemy-course-catalog-scraper",
+    "description": "Collect public Udemy search results as deduplicated course records with ratings, instructors, learning outcomes, curriculum counts, images and public price snapshots, with optional course-page details."
+  },
+  "affiliate": {
+    "enabled": true,
+    "parameter": "fpr=edudata",
+    "actorUrl": "https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata",
+    "pricingUrl": "https://apify.com/pricing?fpr=edudata"
+  },
+  "platform": {
+    "apifyFreePlan": {
+      "monthlyPrepaidUsage": "$5",
+      "renewsMonthly": true,
+      "noCreditCardRequired": true,
+      "unusedCreditsExpire": true,
+      "sourceUrl": "https://apify.com/pricing?fpr=edudata"
+    }
+  },
+  "interfaces": {
+    "web": {
+      "enabled": true,
+      "inputTab": "Input",
+      "outputTab": "Dataset",
+      "runAction": "Start",
+      "primaryInput": "searchUrls",
+      "inputLabel": "Udemy search URLs",
+      "inputSummary": "Enter one or more public Udemy course-search URLs, choose the maximum number of unique courses, and optionally request public course-page details.",
+      "exportFormats": [
+        "JSON",
+        "CSV",
+        "Excel"
+      ]
+    },
+    "api": {
+      "enabled": true,
+      "examples": [
+        "cURL",
+        "Python",
+        "JavaScript"
+      ]
+    }
+  },
+  "seo": {
+    "primaryKeyword": "Udemy course catalog scraper",
+    "secondaryKeywords": [
+      "Udemy course scraper Python",
+      "Udemy course data API",
+      "Udemy course pricing data",
+      "export Udemy courses CSV",
+      "course catalog dataset"
+    ],
+    "topics": [
+      "udemy",
+      "course-catalog",
+      "course-pricing",
+      "education-data",
+      "web-scraping",
+      "apify",
+      "python"
+    ],
+    "longTailIntents": [
+      "How to scrape Udemy course search results with Python",
+      "How to export Udemy course prices and ratings to CSV",
+      "How to build a course catalog from public Udemy search URLs",
+      "How to enrich Udemy course records with public course-page details"
+    ]
+  },
+  "content": {
+    "readmeSectionOrder": [
+      "What this repository helps you do",
+      "Example result",
+      "Run without code",
+      "Try it with Apify's free plan",
+      "Quick start for developers",
+      "Input example",
+      "Request examples",
+      "Output fields",
+      "Common use cases",
+      "Long-tail use-case sections",
+      "FAQ",
+      "Limits and pricing",
+      "Hosted version",
+      "Responsible use",
+      "Support"
+    ],
+    "exampleFiles": [
+      "examples/python/request.py",
+      "examples/python/batch_udemy_searches.py",
+      "examples/python/export_udemy_courses.py"
+    ],
+    "faqFile": "docs/faq.md",
+    "noCodeGuideFile": "docs/no-code-guide.md"
+  },
+  "pricing": {
+    "summary": "The hosted Actor charges one course-result event for each unique public course successfully written to the default Dataset. Current tiered prices range from $0.00100 to $0.00075 per result.",
+    "unit": "one unique public course successfully written to the Dataset",
+    "price": "$0.75-$1.00 per 1,000 courses depending on tier"
+  },
+  "distribution": {
+    "githubUrl": "https://github.com/datacrawler-edu/udemy-course-catalog-python",
+    "actorToGithubUrl": "https://github.com/datacrawler-edu/udemy-course-catalog-python",
+    "githubToActorUrl": "https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata",
+    "organizationHubUrl": "https://github.com/datacrawler-edu",
+    "firstRelease": {
+      "tag": "v0.1.0",
+      "title": "Initial Udemy course catalog examples"
+    }
+  },
+  "examples": {
+    "inputFile": "data/sample-input.json",
+    "outputFile": "data/sample-output.json",
+    "csvFile": "data/sample-output.csv"
+  },
+  "measurement": {
+    "observationWindowDays": 30,
+    "githubSignals": [
+      "views",
+      "uniqueVisitors",
+      "clones",
+      "referrers",
+      "popularContent"
+    ],
+    "apifySignals": [
+      "users",
+      "runs",
+      "datasetItems",
+      "revenue"
+    ],
+    "searchChecks": [
+      "site:github.com/datacrawler-edu/udemy-course-catalog-python",
+      "Udemy course catalog scraper",
+      "Udemy course scraper Python",
+      "Udemy course pricing data"
+    ]
+  },
+  "support": {
+    "issuesUrl": "https://github.com/datacrawler-edu/udemy-course-catalog-python/issues",
+    "actorSupportUrl": "https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata"
+  }
+}

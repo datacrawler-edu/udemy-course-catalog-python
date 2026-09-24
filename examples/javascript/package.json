@@ -1,0 +1,8 @@
+{
+  "name": "udemy-course-catalog-apify-example",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "apify-client": "^2.0.0"
+  }
+}
