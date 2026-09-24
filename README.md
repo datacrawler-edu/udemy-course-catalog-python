@@ -88,6 +88,8 @@ The example reads [`data/sample-input.json`](data/sample-input.json), starts the
 
 See the complete field guide in [`docs/input-reference.md`](docs/input-reference.md).
 
+The main selector inputs are `sortOrder`, `languages`, `levels`, `minRating`, `videoLengths` and `closedCaptionLanguages`. In Apify, language multiselects show readable labels such as **English (EN)** and **Spanish (ES)**; API and JSON integrations send the corresponding ISO code. The feature filters are checkboxes and default to `false`.
+
 ## Request examples
 
 ### cURL

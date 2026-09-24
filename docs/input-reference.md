@@ -9,13 +9,13 @@ In the Apify web interface, Udemy-specific filters are presented as predefined d
 | `searchTerms` | array of strings | Yes | `["python", "data science"]` | 1–10 unique keywords or phrases, each up to 200 characters. |
 | `maxItems` | integer | No | `3` | Maximum number of unique courses across all terms. Default `100`; range `1`–`10000`. |
 | `freeOnly` | boolean | No | `false` | Limit the public catalog to courses marked as free. Default `false`. |
-| `sortOrder` | string | No | `"RATING"` | Result order: `RELEVANCE`, `REVIEWS`, `RATING` or `TIME`. Default `RELEVANCE`. |
-| `languages` | array of strings | No | `["EN"]` | Optional ISO-639-1 course-language codes. |
-| `levels` | array of strings | No | `["BEGINNER"]` | Optional values: `ALL_LEVELS`, `BEGINNER`, `INTERMEDIATE`, `EXPERT`. |
-| `minRating` | number | No | `4.5` | Optional minimum average rating from 0 to 5 in half-point increments. |
-| `videoLengths` | array of strings | No | `["SHORT", "MEDIUM"]` | Optional values: `EXTRA_SHORT`, `SHORT`, `MEDIUM`, `LONG`, `EXTRA_LONG`. |
-| `closedCaptionLanguages` | array of strings | No | `["EN"]` | Optional ISO-639-1 codes for required closed captions. |
-| `mustHaveClosedCaptions` | boolean | No | `false` | Require closed captions. |
+| `sortOrder` | string | No | `"RATING"` | Dropdown in Apify. Result order: `RELEVANCE`, `REVIEWS`, `RATING` or `TIME`. Default `RELEVANCE`. |
+| `languages` | array of strings | No | `["EN"]` | Multiselect showing names plus ISO-639-1 codes, such as `English (EN)` and `Spanish (ES)`. Up to 10 values. |
+| `levels` | array of strings | No | `["BEGINNER"]` | Multiselect with `ALL_LEVELS`, `BEGINNER`, `INTERMEDIATE` and `EXPERT`. Up to 10 values. |
+| `minRating` | number | No | `4.5` | Number from 0 to 5 in half-point increments. |
+| `videoLengths` | array of strings | No | `["SHORT", "MEDIUM"]` | Multiselect with `EXTRA_SHORT`, `SHORT`, `MEDIUM`, `LONG` and `EXTRA_LONG`. |
+| `closedCaptionLanguages` | array of strings | No | `["EN"]` | Multiselect showing caption language names plus ISO-639-1 codes. Up to 10 values. |
+| `mustHaveClosedCaptions` | boolean | No | `false` | Checkbox to require closed captions. |
 | `mustHaveQuizzes` | boolean | No | `false` | Require quizzes. |
 | `mustHaveCodingExercises` | boolean | No | `false` | Require coding exercises. |
 | `mustHavePracticeTests` | boolean | No | `false` | Require practice tests. |
