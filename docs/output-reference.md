@@ -14,7 +14,7 @@ The default Dataset contains one normalized item per unique public course.
 | `learningOutcomes` | array | Yes | Public learning-outcome strings; can be empty. |
 | `badges` | array | Yes | Public badge objects; can be empty. |
 | `images` | object | Yes | Available public course image URLs. |
-| `price` | object | Yes | Public price snapshot with amount, currency, display string and list/discount amounts when available. |
+| `price` | object / null | Yes | Public price snapshot with amount, currency, display string and list/discount amounts when available; `null` when no public price is exposed. |
 | `scrapedAt` | date-time string | Yes | UTC capture time. |
 | `headline`, `isFree`, `isPracticeTestCourse`, `locale`, `level` | mixed / nullable | No | Additional search-result metadata. |
 | `ratingAverage`, `ratingCount` | number / integer | No | Public rating and review count. |

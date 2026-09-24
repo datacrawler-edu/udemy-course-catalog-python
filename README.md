@@ -117,7 +117,7 @@ The default Dataset writes one item for each unique public course successfully c
 | `ratingAverage`, `ratingCount`, `locale`, `level` | Public catalog signals when available. |
 | `durationSeconds`, `lectureCount`, `practiceTestQuestionsCount` | Curriculum and duration counts. |
 | `instructors`, `learningOutcomes`, `badges`, `images` | Public course metadata arrays and image URLs. |
-| `price` | Current public price snapshot with amount, currency and display string when available. |
+| `price` | Current public price snapshot with amount, currency and display string when available; it can be `null` when no public price is exposed. |
 | `scrapedAt` | UTC capture timestamp. |
 | `detailStatus` and optional detail fields | Present when course-page enrichment is requested; unavailable details are marked rather than invented. |
 
