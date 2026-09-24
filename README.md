@@ -8,7 +8,7 @@ This repository contains request examples, a small input, a real sanitized Datas
 
 ## What this repository helps you do
 
-- Turn one or more public Udemy search URLs into a deduplicated course catalog.
+- Turn one or more Udemy keywords or phrases into a deduplicated course catalog.
 - Compare titles, ratings, instructors, learning outcomes, curriculum counts and public price snapshots.
 - Build research, education-data, SEO and catalog workflows from JSON or CSV output.
 - Optionally request structured public details from each returned course page.
@@ -41,8 +41,8 @@ Prices, ratings, counts and timestamps are snapshots from the run and can change
 You can run the hosted Actor directly from the Apify web interface.
 
 1. Open [Udemy Course Catalog & Pricing Data Scraper on Apify](https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata).
-2. In the **Input** tab, add one or more public Udemy course-search URLs containing `q`.
-3. Set the maximum number of unique courses and decide whether to include optional course-page details.
+2. In the **Input** tab, enter one or more Udemy keywords or phrases.
+3. Set the maximum number of unique courses, optionally select free courses, and decide whether to include course-page details.
 4. Click **Start**.
 5. Open the **Dataset** tab and export JSON, CSV or Excel-compatible data.
 
@@ -76,10 +76,9 @@ The example reads [`data/sample-input.json`](data/sample-input.json), starts the
 
 ```json
 {
-  "searchUrls": [
-    "https://www.udemy.com/courses/search/?src=ukw&q=python"
-  ],
+  "searchTerms": ["python"],
   "maxItems": 3,
+  "freeOnly": false,
   "includeCourseDetails": false
 }
 ```
@@ -129,7 +128,7 @@ Read [`docs/use-cases.md`](docs/use-cases.md) for complete workflows covering:
 
 ## How to scrape Udemy course search results with Python
 
-Use [`examples/python/request.py`](examples/python/request.py) with a public search URL containing `q`. Submit several search URLs in one input when you need a combined catalog; the Actor deduplicates courses across targets.
+Use [`examples/python/request.py`](examples/python/request.py) with one or more keywords or phrases. Submit several terms in one input when you need a combined catalog; the Actor deduplicates courses across targets.
 
 ## How to export Udemy course prices and ratings to CSV
 
@@ -141,7 +140,7 @@ See [`docs/faq.md`](docs/faq.md) for questions derived from the real input, outp
 
 ## Limits and pricing
 
-Submit 1–10 unique public Udemy course-search URLs. Each URL must include a search query such as `q=python`. `maxItems` defaults to 100 and accepts 1–10,000 unique courses across all targets. `includeCourseDetails` defaults to `false`; enabling it can increase request count and run time.
+Submit 1–10 unique Udemy keywords or phrases, each up to 200 characters. `maxItems` defaults to 100 and accepts 1–10,000 unique courses across all terms. `freeOnly` defaults to `false`; `includeCourseDetails` defaults to `false` and can increase request count and run time.
 
 The Actor charges one `course-result` event for each unique public course successfully written to the default Dataset. The current configured tier range is **$0.00100–$0.00075 per result**, equivalent to **$1.00–$0.75 per 1,000 courses** depending on the Apify tier. Failed requests, duplicates and records not written to the Dataset do not create that event. See the [Actor pricing page](https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata) for the active terms.
 

@@ -17,11 +17,12 @@ def main() -> None:
         raise SystemExit("Set APIFY_API_TOKEN before running this example.")
 
     run_input = {
-        "searchUrls": [
-            "https://www.udemy.com/courses/search/?src=ukw&q=python",
-            "https://www.udemy.com/courses/search/?src=ukw&q=data+science",
+        "searchTerms": [
+            "python",
+            "data science",
         ],
         "maxItems": 10,
+        "freeOnly": False,
         "includeCourseDetails": False,
     }
     client = ApifyClient(token)

@@ -34,9 +34,9 @@
       "inputTab": "Input",
       "outputTab": "Dataset",
       "runAction": "Start",
-      "primaryInput": "searchUrls",
-      "inputLabel": "Udemy search URLs",
-      "inputSummary": "Enter one or more public Udemy course-search URLs, choose the maximum number of unique courses, and optionally request public course-page details.",
+      "primaryInput": "searchTerms",
+      "inputLabel": "Search terms",
+      "inputSummary": "Enter one or more Udemy keywords or phrases, choose the maximum number of unique courses, optionally limit to free courses, and optionally request public course-page details.",
       "exportFormats": [
         "JSON",
         "CSV",
@@ -73,7 +73,7 @@
     "longTailIntents": [
       "How to scrape Udemy course search results with Python",
       "How to export Udemy course prices and ratings to CSV",
-      "How to build a course catalog from public Udemy search URLs",
+      "How to build a course catalog from Udemy search terms",
       "How to enrich Udemy course records with public course-page details"
     ]
   },

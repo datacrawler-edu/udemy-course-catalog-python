@@ -2,11 +2,11 @@
 
 ## Can I run the Actor without Python or code?
 
-Yes. Open the [hosted Actor](https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata), enter one or more public Udemy search URLs in the **Input** tab, click **Start** and inspect or export the **Dataset**. See [`docs/no-code-guide.md`](no-code-guide.md).
+Yes. Open the [hosted Actor](https://apify.com/datascraperes/udemy-course-catalog-scraper?fpr=edudata), enter keywords or phrases in the **Input** tab, click **Start** and inspect or export the **Dataset**. See [`docs/no-code-guide.md`](no-code-guide.md).
 
-## What URL should I submit?
+## What should I enter in the search field?
 
-Submit a public Udemy course-search URL containing a `q` query, for example `https://www.udemy.com/courses/search/?src=ukw&q=python`. You can submit 1–10 unique search URLs and preserve public filters included in those URLs.
+Enter a keyword or phrase such as `python`, `data science` or `project management`. You can submit 1–10 terms. The Actor creates the public Udemy search requests internally, so no URL construction is needed.
 
 ## Can I test it with Apify's Free plan?
 
@@ -14,7 +14,11 @@ Apify's Free plan currently includes **$5 in monthly prepaid usage** for the Api
 
 ## How do I scrape several Udemy topics in one run?
 
-Add several search URLs to `searchUrls` and set `maxItems` to the total unique-course target. The Actor deduplicates courses across targets and retains `sourceSearchUrl` and `page` for provenance. See [`examples/python/batch_udemy_searches.py`](../examples/python/batch_udemy_searches.py).
+Add several terms to `searchTerms` and set `maxItems` to the total unique-course target. The Actor deduplicates courses across terms and retains generated `sourceSearchUrl` and `page` values for provenance. See [`examples/python/batch_udemy_searches.py`](../examples/python/batch_udemy_searches.py).
+
+## How do I retrieve only free courses?
+
+Set `freeOnly` to `true`. The Actor applies the public free-course filter internally.
 
 ## How do I export Udemy course prices to CSV?
 

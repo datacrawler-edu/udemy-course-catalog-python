@@ -1,7 +1,8 @@
 {
-  "searchUrls": [
-    "https://www.udemy.com/courses/search/?src=ukw&q=python"
+  "searchTerms": [
+    "python"
   ],
   "maxItems": 3,
+  "freeOnly": false,
   "includeCourseDetails": false
 }

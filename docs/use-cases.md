@@ -2,47 +2,43 @@
 
 ## Topic and competitor course research
 
-Submit search URLs for the topics you want to compare and set a shared unique-course target.
+Submit the topics you want to compare and set a shared unique-course target.
 
 ```json
 {
-  "searchUrls": [
-    "https://www.udemy.com/courses/search/?q=python",
-    "https://www.udemy.com/courses/search/?q=data+science"
-  ],
+  "searchTerms": ["python", "data science"],
   "maxItems": 20,
+  "freeOnly": false,
   "includeCourseDetails": false
 }
 ```
 
-Inspect `title`, `url`, `ratingAverage`, `ratingCount`, `instructors`, `durationSeconds` and `sourceSearchUrl`.
+Inspect `title`, `url`, `ratingAverage`, `ratingCount`, `instructors`, `durationSeconds` and the generated `sourceSearchUrl`.
 
 ## Price and rating snapshots
 
-Run the same search URL periodically with a small `maxItems` value and store the Dataset exports with `scrapedAt`.
+Run the same terms periodically with a small `maxItems` value and store the Dataset exports with `scrapedAt`.
 
 ```json
 {
-  "searchUrls": [
-    "https://www.udemy.com/courses/search/?src=ukw&q=python"
-  ],
+  "searchTerms": ["python"],
   "maxItems": 10,
+  "freeOnly": false,
   "includeCourseDetails": false
 }
 ```
 
 Compare `price.amount`, `price.currency`, `price.priceString`, `ratingAverage` and `ratingCount`. These are time- and market-sensitive public snapshots, not permanent price guarantees.
 
-## SEO or training-catalog enrichment
+## Free-course discovery and catalog enrichment
 
-Enable optional detail enrichment when the catalog needs public descriptions, language, offers, syllabus sections or audience information.
+Enable `freeOnly` to focus on courses marked as free, and enable optional detail enrichment when the catalog needs public descriptions, language, offers, syllabus sections or audience information.
 
 ```json
 {
-  "searchUrls": [
-    "https://www.udemy.com/courses/search/?q=python"
-  ],
+  "searchTerms": ["python"],
   "maxItems": 5,
+  "freeOnly": true,
   "includeCourseDetails": true
 }
 ```
